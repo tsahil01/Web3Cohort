@@ -17,4 +17,22 @@
     - That is Modulo 256. 
     - That is why 257 becomes 1 (257 % 256 = 1).
 
-- 
+-  ```js
+    let y = 12;
+
+    y.toString(); // decimal
+    > '12'
+
+    y.toString(2); // binary
+    > '1100'
+
+    y.toString(8); // octal
+    > '14'
+
+    y.toString(16); // hexadecimal
+    > 'c'
+    ```
+- In ASCII: `1 character(byte) = 8 bits`
+- In Hexadecimal: `1 character = 4 bits`
+- In Base64: `1 character = 6 bits`
+- In Base58: `1 character = 5.86 bits`
