@@ -3,7 +3,8 @@
 
 ### [week 1: Introduction](https://projects.100xdevs.com/tracks/web3-orientation/Web3-Cohort---Orientation-1)
 - [YT - Bitcoin whitepaper animation](https://www.youtube.com/watch?v=NoqNhWnjE1Q)
-    
+    <hr>
+
 ### [week 2: Public Key Cryptography](https://projects.100xdevs.com/tracks/public-private-keys/Public-Key-Cryptography-1)
 -   ```js
     const bytesOne = new Uint8Array([2, 5, 6, 257]); // it takes less memory than the tradional array.
@@ -36,3 +37,12 @@
 - In Hexadecimal: `1 character = 4 bits`
 - In Base64: `1 character = 6 bits`
 - In Base58: `1 character = 5.86 bits`
+<hr>
+
+### Week 2 Assignment: [*Pouch: An open-source HD wallet generator for Sol and Eth.*](https://web3pouch.vercel.app/)
+- [github](https://github.com/tsahil01/web3-wallet/)
+- Main Wallet Logic: [src/config/mainConfig.ts](https://github.com/tsahil01/web3-wallet/blob/main/src/config/mainConfig.ts)
+
+<hr>
+
+### [week 3: Creating a web based wallet, RPCs](https://projects.100xdevs.com/tracks/web-wallet-rpc/Creating-a-web-based-wallet--RPCs-1)
