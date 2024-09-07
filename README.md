@@ -63,8 +63,8 @@
 
 ### **How is Eth/ Solana different from bitcoin?**
 
-  - blockchain only have decentralised money.
-  - Eterium introduced smart contracts. Which are written in solidity.
+  - bitcoin only have decentralised money.
+  - ethereum introduced smart contracts. Which are written in solidity.
   - which means rather than having different blockchains for different purposes, use our ethe block chain and build your product on top of it.
   - On Solana there are Programs. And on Eth it's called Smart contracts.
   - http servers are deployed on azure/ AWS/ gcp
@@ -80,7 +80,7 @@
   - data and programs are stored differently in different accounts.
 
 ### **RENT ON SOLANA BLOCKCHAIN -**
-  - See comments of video, not in class notes.
+  - See comments of video, not in class notes. - [Link](https://www.quicknode.com/guides/solana-development/getting-started/understanding-rent-on-solana)
   - to stored data on solana blockchain (various minor machines) we need to pay something, that is what we call it as rent.
 
 ## **AI Generated Notes:**
@@ -117,5 +117,44 @@ Here's an explanation of the key points from your notes in simple terms:
 
 - **Rent on Solana:**
   - To store data on the Solana blockchain, you need to pay a fee. This fee is called "rent." It's like paying for storage space to keep your data on the blockchain. The rent is used to compensate the network for using its resources.
+  - It is refundable.
+  - That is we have to maintain minimum balance in our account to keep it alive.
+  - If we don't have enough balance, our account will be deleted.
+  - This is to prevent spamming on the network.
 
 This breakdown explains the key concepts and differences in an easy-to-understand way.
+<hr>
+
+### Solana CLI Commands:
+- `solana --version` - to check the version of solana.
+- `solana-test-validator` - to start a local testnet.
+- `solana-test-validator --reset` - to reset the local testnet.
+- `solana-keygen new` - to generate a new keypair. Stored in `~/.config/solana/` directory.
+- `solana address` - to get the address of the keypair.
+- `solana config get` - to get the current configuration.
+
+### Solana Devnet, Mainnet, Testnet:
+- RPC calls are made to the network to get the data.
+- So we have different networks for different purposes.
+- We need to change the `RPC endpoint` to switch between networks.
+
+- **Devnet:** 
+  - Development network.
+  - For testing and development.
+  - No real money involved.
+  - Fast and free transactions.
+  - To change RPC enpoint URL: `solana config set --url https://api.devnet.solana.com` - to set the devnet.
+
+- **Testnet:**
+  - For testing.
+  - Real money involved.
+  - Slow and expensive transactions.
+  - To change RPC enpoint URL: `solana config set --url https://api.testnet.solana.com` - to set the testnet.
+  - This runs on our local machine. Which has local RPC endpoint like `http://localhost:8899`.
+
+
+- **Mainnet:**
+  - The main network.
+  - Real money involved.
+  - Slow and expensive transactions.
+  - To change RPC enpoint URL: `solana config set --url https://api.mainnet-beta.solana.com` - to set the mainnet.
