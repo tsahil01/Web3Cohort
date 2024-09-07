@@ -381,3 +381,57 @@ These are some of the most common commands for managing accounts, interacting wi
 - **RBI -> Bank -> User**
 - **Mint Account -> Token Account -> User Account**
 - Watch the Class video for better understanding.
+
+<hr>
+
+## AI Notes:
+### Notes on Solana Token Program
+
+#### Overview:
+- The **Solana Token Program** is akin to a smart contract on Ethereum and is deployed on the Solana blockchain.
+- It allows users to create and manage tokens (e.g., USDT, USDC) on Solana.
+- USDT and USDC, while well-known tokens, are not blockchains themselves; they are tokens created using the Solana Token Program.
+  
+#### Key Concepts:
+1. **Token Program**:  
+   - Developed by Solana engineers and deployed on the Solana blockchain.  
+   - It’s the foundation for creating tokens on Solana, similar to how smart contracts work on Ethereum.
+  
+2. **USDT & USDC**:  
+   - Both are tokens built using this program, which means they follow the same protocol as any custom token deployed on Solana.  
+   - USDT and USDC have their own **Mint Accounts**, which is like the central authority managing these tokens.  
+   - Users can create **Token Accounts** associated with these tokens to manage their holdings.
+   
+3. **Mint and Token Accounts**:  
+   - **Mint Account**: Like a central bank account (such as the RBI), responsible for minting new tokens.
+   - **Token Account**: Like a user’s bank account where individual token balances are stored.  
+   - **User Account**: An account that interacts with token accounts for transfers or other operations.
+
+4. **Token Creation Commands**:  
+   - CLI Command to create a token: `spl-token create-token`.  
+   - By default, tokens on Solana have **9 decimal points**, which allows for fractional ownership similar to cryptocurrencies like Bitcoin.
+
+#### Steps for Token Creation:
+1. **Token Creation**:
+   - You create a token (just like USDT/USDC) using the Solana CLI with the command `spl-token create-token`.
+   - A **Mint Account** is generated for this token, similar to how USDT and USDC have their own mint accounts.
+
+2. **Associated Token Account Creation**:
+   - A **Token Account** is created for this new token.
+   - This token account acts like a bank account for users to hold or transact with the new token.
+
+#### Example Explanation:
+- To better understand this concept, think of the following analogy:
+   - **RBI (Mint Account)** -> **Bank (Token Account)** -> **User (User Account)**
+   - The mint account represents the authority to issue tokens, the token account stores those tokens, and the user account allows interaction with them.
+
+### Visualization:
+- In the diagram mentioned:
+   - Solana created the **Token Program**.
+   - Using this program, **USDT** and **USDC** were deployed, with mint accounts generated for both tokens.
+   - Token accounts were then created for users to store and transfer their USDT and USDC balances.
+
+### Conclusion:
+The Solana Token Program allows users to create tokens and manage them efficiently, similar to how tokens like USDT and USDC are managed. The process of token creation, minting, and account setup is straightforward using Solana's CLI tools. The analogy with a central bank, banks, and users helps clarify how mint accounts, token accounts, and user accounts work together.
+
+<hr>
