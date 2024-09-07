@@ -359,3 +359,25 @@ These are some of the most common commands for managing accounts, interacting wi
 - **Additional Resource:**
   - Watch: [Harkirat Singh - Programming on Solana | Program Derived Addresses and Cross Program Invocation](https://www.youtube.com/watch?v=p0eD29d8JCM)
 
+<hr>
+
+### Token Program on Solana: (for steps - [link](https://petal-estimate-4e9.notion.site/Creating-a-token-b62f51d3b97e4706b8efd9cf432832e8))
+- Engineer at Solana created a token program. (which is like a smart contract on ethereum)
+- This program is deployed on the solana blockchain.
+- USDT & USDC are not a blockchain. They are tokens deployed on the solana blockchain using this token program.
+- USDT and USDC are deployed on the some blockchain using this token program.
+- Whatever we want to do on a new token, we can do it on a exising token as well.
+- Which means in the below image, Solana folks create a token program. And they deployed USDT and USDC on top of it.
+- So a Mint Account is created for USDT and USDC. And then we can create token accounts for USDT and USDC.
+![tokenSolana](/MD-data/image2.png)
+- CLI commands to create a token: `spl-token create-token` - to create a new token.
+- ![spl-token](/MD-data/image3.png)
+- by default, the decimals are set to 9. Which means we can have 9 decimal points in the token.
+- ![token](/MD-data/image4.png)
+- What we did here is, we created a token just like USDT and USDC. And we can do the same things with this token as well.
+- Now we will create a assocaited token account for this token. Just like a user has a bank account, this token has an account.
+- All these above things are quite easy.
+- **Example: We have RBI, which is a mint account. And we have a bank account, which is a token account. And we have a user, which is a user account.**
+- **RBI -> Bank -> User**
+- **Mint Account -> Token Account -> User Account**
+- Watch the Class video for better understanding.
