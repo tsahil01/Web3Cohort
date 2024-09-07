@@ -132,6 +132,8 @@ This breakdown explains the key concepts and differences in an easy-to-understan
 - `solana-keygen new` - to generate a new keypair. Stored in `~/.config/solana/` directory.
 - `solana address` - to get the address of the keypair.
 - `solana config get` - to get the current configuration.
+- `solana balance` - to get the balance of the account.
+- `solana airdrop 1 ` - to get 1 SOL in the account. (only works on devnet and testnet)
 
 ### Solana Devnet, Mainnet, Testnet:
 - RPC calls are made to the network to get the data.
@@ -158,3 +160,202 @@ This breakdown explains the key concepts and differences in an easy-to-understan
   - Real money involved.
   - Slow and expensive transactions.
   - To change RPC enpoint URL: `solana config set --url https://api.mainnet-beta.solana.com` - to set the mainnet.
+
+To run on local RPC endpoint: `solana config set --url http://localhost:8899`
+
+<hr>
+
+### Common Solana CLI Commands:
+Solana CLI is a powerful tool for interacting with the Solana blockchain, managing accounts, deploying smart contracts, and more. Here’s a list of common **Solana CLI** commands and their descriptions:
+
+### **Account and Wallet Management**
+
+1. **Create a New Keypair (Wallet)**
+   ```bash
+   solana-keygen new
+   ```
+   This command generates a new keypair (public and private key) and stores it locally.
+
+2. **Show Your Public Key**
+   ```bash
+   solana address
+   ```
+   Displays the public key of your default wallet.
+
+3. **Show Account Balance**
+   ```bash
+   solana balance
+   ```
+   Displays the SOL balance of the default wallet or a specified public key.
+
+4. **Airdrop SOL**
+   ```bash
+   solana airdrop <amount> <recipient_public_key>
+   ```
+   Requests an airdrop of SOL to your account (usually works on testnet and devnet).
+
+5. **Transfer SOL**
+   ```bash
+   solana transfer <recipient_public_key> <amount>
+   ```
+   Transfers SOL from your default wallet to another public key.
+
+6. **Show Wallet Details**
+   ```bash
+   solana account <public_key>
+   ```
+   Displays detailed information about an account, such as balance and ownership.
+
+### **Network Management**
+
+7. **Set CLI to Devnet/Testnet/Mainnet**
+   - **Devnet:**
+     ```bash
+     solana config set --url https://api.devnet.solana.com
+     ```
+   - **Testnet:**
+     ```bash
+     solana config set --url https://api.testnet.solana.com
+     ```
+   - **Mainnet:**
+     ```bash
+     solana config set --url https://api.mainnet-beta.solana.com
+     ```
+
+8. **Check Current Network Configuration**
+   ```bash
+   solana config get
+   ```
+   Shows the current network URL, wallet path, and other configurations.
+
+9. **Ping a Solana Cluster**
+   ```bash
+   solana ping
+   ```
+   Sends a transaction to confirm the connectivity and latency with the current cluster.
+
+### **Program (Smart Contract) Deployment**
+
+10. **Build and Deploy a Program**
+    ```bash
+    solana program deploy <path_to_program_binary>
+    ```
+    Deploys a compiled Solana program (smart contract) to the blockchain.
+
+11. **Check Program Details**
+    ```bash
+    solana program show <program_id>
+    ```
+    Shows details about a deployed program (owner, balance, etc.).
+
+12. **Close a Program**
+    ```bash
+    solana program close <program_id>
+    ```
+    Closes a program and refunds its rent balance to the program owner.
+
+### **Validator and Network Operations**
+
+13. **Check Cluster Version**
+    ```bash
+    solana --version
+    ```
+    Displays the Solana CLI version and the network cluster version.
+
+14. **Check Cluster Health**
+    ```bash
+    solana validators
+    ```
+    Lists the current validators on the network and their status.
+
+15. **Vote on Behalf of a Validator**
+    ```bash
+    solana vote-authorize-voter <vote_account> <new_voter>
+    ```
+    Updates the authorized voter for a validator vote account.
+
+### **Token Management (SPL Tokens)**
+
+16. **Create a New Token**
+    ```bash
+    spl-token create-token
+    ```
+    Creates a new SPL token (Solana Program Library token).
+
+17. **Create a Token Account**
+    ```bash
+    spl-token create-account <token_mint_address>
+    ```
+    Creates a token account to hold the specified token.
+
+18. **Mint New Tokens**
+    ```bash
+    spl-token mint <token_mint_address> <amount> <recipient_public_key>
+    ```
+    Mints new tokens of the specified SPL token to a recipient's account.
+
+19. **Transfer Tokens**
+    ```bash
+    spl-token transfer <token_mint_address> <amount> <recipient_account>
+    ```
+    Transfers SPL tokens from your token account to another account.
+
+20. **Check Token Account Balance**
+    ```bash
+    spl-token balance <token_account_address>
+    ```
+    Displays the balance of a specified SPL token account.
+
+These are some of the most common commands for managing accounts, interacting with the network, deploying programs, and handling tokens on Solana. You can always use the `--help` flag for more details about any command.
+
+<hr>
+
+### Solana Data Model:
+- We know that a account on solana can be set to executable or not.
+- If it is executable, it can run a program. That is how we deploy a program on solana.
+- If it is not executable, it can store data.
+- ![solana data model](/MD-data/image.png)
+- In web2 world we store our code to AWS/ Azure/ GCP. And we store our data to databases. That is, in different places.
+- In web3 world we store our code and data in `different accounts`. 
+- On Solana, if there is an Account which has `executable` set to `true`, and it has data, that data is stored in different account. That is what we can see in the image.
+
+- Watch: [Harkirat Singh - Programming on Solana | Program Derived addresses and Cross Program Invocation](https://www.youtube.com/watch?v=p0eD29d8JCM)
+
+<hr>
+
+## AI Notes:
+### Solana Data Model
+
+- **Account Types:**
+  - **Executable Accounts:** 
+    - Can run programs.
+    - Used to deploy programs on Solana.
+  - **Non-Executable Accounts:**
+    - Used to store data.
+
+- **Web2 vs. Web3 Storage:**
+  - **Web2:**
+    - Code is stored on AWS, Azure, GCP, etc.
+    - Data is stored in databases.
+  - **Web3 (Solana):**
+    - Code and data are stored in different accounts.
+    - On Solana, if an account is `executable` and contains data, that data is actually stored in a separate account.
+
+- **Visual Reference:**
+  - ![solana data model](/MD-data/image.png)
+
+1. **Accounts in Solana:**
+   - Solana operates on an **account-based model** where each account can either store data or execute programs.
+   - **Executable accounts** are used to deploy and execute programs, while **non-executable accounts** store state or other types of data.
+
+2. **Web2 vs. Web3 Storage Comparison:**
+   - In **Web2**, code (for running applications) is stored separately (on cloud platforms like AWS/Azure/GCP), and data is stored in databases.
+   - In **Web3** (specifically Solana), programs (code) are stored in **executable accounts**, and the data they manage is stored in **non-executable accounts**.
+
+3. **Account Relationships:**
+   - In Solana, if an account is marked as executable, it doesn’t store the data directly. Instead, the **data associated with that program is stored in different (non-executable) accounts**.
+   - The image you referred to likely illustrates how program accounts and data accounts are structured.
+
+- **Additional Resource:**
+  - Watch: [Harkirat Singh - Programming on Solana | Program Derived Addresses and Cross Program Invocation](https://www.youtube.com/watch?v=p0eD29d8JCM)
+
