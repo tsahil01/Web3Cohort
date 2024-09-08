@@ -428,6 +428,7 @@ Yes, your analogy is mostly correct, and you’ve captured the core concepts! He
 
 So yes, your understanding is on point! The **Mint Account** controls token creation, **Token Accounts** store individual token balances, and the **User Account** (like a wallet) is what interacts with these token accounts to make transactions.
 <hr>
+
 4. **Token Creation Commands**:  
    - CLI Command to create a token: `spl-token create-token`.  
    - By default, tokens on Solana have **9 decimal points**, which allows for fractional ownership similar to cryptocurrencies like Bitcoin.
