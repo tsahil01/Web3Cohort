@@ -382,6 +382,8 @@ These are some of the most common commands for managing accounts, interacting wi
 - **Mint Account -> Token Account -> User Account**
 - Watch the Class video for better understanding.
 
+- ![image](https://github.com/user-attachments/assets/895a8383-5107-4436-b0a8-81684ae2cc78)
+
 <hr>
 
 ## AI Notes:
