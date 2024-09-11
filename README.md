@@ -457,3 +457,6 @@ So yes, your understanding is on point! The **Mint Account** controls token crea
 The Solana Token Program allows users to create tokens and manage them efficiently, similar to how tokens like USDT and USDC are managed. The process of token creation, minting, and account setup is straightforward using Solana's CLI tools. The analogy with a central bank, banks, and users helps clarify how mint accounts, token accounts, and user accounts work together.
 
 <hr>
+<hr>
+
+# [Week 5: Wallet adapter](https://petal-estimate-4e9.notion.site/Wallet-adapter-860feade9cb940cea696eedf4fc61251)
