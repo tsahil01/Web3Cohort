@@ -460,3 +460,4 @@ The Solana Token Program allows users to create tokens and manage them efficient
 <hr>
 
 # [Week 5: Wallet adapter](https://petal-estimate-4e9.notion.site/Wallet-adapter-860feade9cb940cea696eedf4fc61251)
+- You can follow to create faucet: [link](https://github.com/anza-xyz/wallet-adapter/blob/master/APP.md)
