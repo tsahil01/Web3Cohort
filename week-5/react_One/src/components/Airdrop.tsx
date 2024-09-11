@@ -40,24 +40,28 @@ export default function Airdrop() {
     <>
       {wallet.publicKey && (
         <>
-          {balance && (
-            <h1 className="mx-auto text-5xl font-bold">
-              Balance: {balance} SOL
-            </h1>
-          )}
-          <Button onClick={getBalance} className="mx-auto">
-            Get Balance
-          </Button>
-          <h2 className="text-xl font-bold mx-auto mt-5">Airdrop</h2>
-          <div className="flex md:flex-row flex-col gap-4 mx-auto">
-            <Input
-              type="number"
-              placeholder="Enter SOL"
-              onChange={(e) => {
-                setSol(e.target.value);
-              }}
-            />
-            <Button onClick={sendAirdropToUser}>Request Airdrop</Button>
+          <div className="flex flex-col gap-4 border mx-auto p-5 rounded-xl">
+            {balance && (
+              <h1 className="mx-auto text-5xl font-bold">
+                Balance: {balance} SOL
+              </h1>
+            )}
+            <Button onClick={getBalance} className="mx-auto">
+              Get Balance
+            </Button>
+          </div>
+          <div className="border mx-auto p-5 rounded-xl flex flex-col gap-4">
+            <h2 className="text-xl font-bold mx-auto mt-5">Airdrop</h2>
+            <div className="flex md:flex-row flex-col gap-4 mx-auto">
+              <Input
+                type="number"
+                placeholder="Enter SOL"
+                onChange={(e) => {
+                  setSol(e.target.value);
+                }}
+              />
+              <Button onClick={sendAirdropToUser}>Request Airdrop</Button>
+            </div>
           </div>
         </>
       )}

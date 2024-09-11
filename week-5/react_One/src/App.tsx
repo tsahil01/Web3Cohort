@@ -12,6 +12,11 @@ import Header from "./components/Header";
 import Airdrop from "./components/Airdrop";
 import { Toaster } from "./components/ui/toaster";
 import { SignMessage } from "./components/SignMessage";
+import SendSolana from "./components/SendSolana";
+
+import { Buffer } from "buffer";
+window.Buffer = window.Buffer || Buffer;
+
 
 export default function App() {
   return (
@@ -27,6 +32,7 @@ export default function App() {
               </div>
               <Airdrop />
               <SignMessage />
+              <SendSolana />
             </div>
           </main>
         </WalletModalProvider>
