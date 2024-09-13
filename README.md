@@ -56,42 +56,47 @@
 <hr>
 
 # [week 4: Solana programs , accounts and the token program Confirmation](https://petal-estimate-4e9.notion.site/Solana-Jargon-Programming-model-Tokens-45937002d4c24cda9d02fc02a6dedc1c)
+
 - `Watch the Offline video (week 4.2) only`
 - [Must Read: Solana, Eth, Coins, Tokens, Smart Contract](https://chatgpt.com/share/391916b3-071e-40e8-b712-6548752de813)
 
-## My Class Notes: 
+## My Class Notes:
 
 ### **How is Eth/ Solana different from bitcoin?**
 
-  - bitcoin only have decentralised money.
-  - ethereum introduced smart contracts. Which are written in solidity.
-  - which means rather than having different blockchains for different purposes, use our ethe block chain and build your product on top of it.
-  - On Solana there are Programs. And on Eth it's called Smart contracts.
-  - http servers are deployed on azure/ AWS/ gcp
-  - smart contracts/ programs are deployed on blockchains.
-  - Solana works slightly different than other blockchains.
-
+- bitcoin only have decentralised money.
+- ethereum introduced smart contracts. Which are written in solidity.
+- which means rather than having different blockchains for different purposes, use our ethe block chain and build your product on top of it.
+- On Solana there are Programs. And on Eth it's called Smart contracts.
+- http servers are deployed on azure/ AWS/ gcp
+- smart contracts/ programs are deployed on blockchains.
+- Solana works slightly different than other blockchains.
 
 ### **ACCOUNTS ON SOLANA:**
-  - Account on solana blockchains is a fundamental DS used to store various types of information.
-  - account can store solana (money)
-  - an solana can store some data as well.
-  - it can be executable or not.
-  - data and programs are stored differently in different accounts.
+
+- Account on solana blockchains is a fundamental DS used to store various types of information.
+- account can store solana (money)
+- an solana can store some data as well.
+- it can be executable or not.
+- data and programs are stored differently in different accounts.
 
 ### **RENT ON SOLANA BLOCKCHAIN -**
-  - See comments of video, not in class notes. - [Link](https://www.quicknode.com/guides/solana-development/getting-started/understanding-rent-on-solana)
-  - to stored data on solana blockchain (various minor machines) we need to pay something, that is what we call it as rent.
+
+- See comments of video, not in class notes. - [Link](https://www.quicknode.com/guides/solana-development/getting-started/understanding-rent-on-solana)
+- to stored data on solana blockchain (various minor machines) we need to pay something, that is what we call it as rent.
 
 ## **AI Generated Notes:**
+
 Here's an explanation of the key points from your notes in simple terms:
 
 ### How Ethereum and Solana Differ from Bitcoin:
 
-- **Bitcoin:** 
+- **Bitcoin:**
+
   - Bitcoin is mainly about digital money that is decentralized, meaning no single entity controls it. It's like a digital version of cash that people can use to send money to each other without needing a bank.
 
 - **Ethereum (Eth):**
+
   - Ethereum takes things further by introducing something called "smart contracts." These are like computer programs that run on the blockchain, making decisions automatically based on certain conditions. For example, you could create a smart contract to automatically release payment when a job is completed.
   - Instead of creating a new blockchain for every different use, Ethereum lets you build your application directly on its blockchain using these smart contracts.
 
@@ -100,15 +105,17 @@ Here's an explanation of the key points from your notes in simple terms:
 
 ### Where Things Are Deployed:
 
-- **Web Servers:** 
+- **Web Servers:**
+
   - Normally, when you deploy a website or an app, you might use cloud services like Azure, AWS (Amazon Web Services), or GCP (Google Cloud Platform).
 
-- **Smart Contracts/Programs:** 
+- **Smart Contracts/Programs:**
   - In the blockchain world, when you create a smart contract (on Ethereum) or a program (on Solana), you deploy it on the blockchain itself instead of a traditional server.
 
 ### Solana's Unique Features:
 
 - **Accounts on Solana:**
+
   - On the Solana blockchain, an "account" is like a storage unit where information is kept. These accounts can store:
     - Money (Solana tokens)
     - Data (information)
@@ -123,9 +130,11 @@ Here's an explanation of the key points from your notes in simple terms:
   - This is to prevent spamming on the network.
 
 This breakdown explains the key concepts and differences in an easy-to-understand way.
+
 <hr>
 
 ### Solana CLI Commands:
+
 - `solana --version` - to check the version of solana.
 - `solana-test-validator` - to start a local testnet.
 - `solana-test-validator --reset` - to reset the local testnet.
@@ -136,11 +145,13 @@ This breakdown explains the key concepts and differences in an easy-to-understan
 - `solana airdrop 1 ` - to get 1 SOL in the account. (only works on devnet and testnet)
 
 ### Solana Devnet, Mainnet, Testnet:
+
 - RPC calls are made to the network to get the data.
 - So we have different networks for different purposes.
 - We need to change the `RPC endpoint` to switch between networks.
 
-- **Devnet:** 
+- **Devnet:**
+
   - Development network.
   - For testing and development.
   - No real money involved.
@@ -148,12 +159,12 @@ This breakdown explains the key concepts and differences in an easy-to-understan
   - To change RPC enpoint URL: `solana config set --url https://api.devnet.solana.com` - to set the devnet.
 
 - **Testnet:**
+
   - For testing.
   - Real money involved.
   - Slow and expensive transactions.
   - To change RPC enpoint URL: `solana config set --url https://api.testnet.solana.com` - to set the testnet.
   - This runs on our local machine. Which has local RPC endpoint like `http://localhost:8899`.
-
 
 - **Mainnet:**
   - The main network.
@@ -166,38 +177,49 @@ To run on local RPC endpoint: `solana config set --url http://localhost:8899`
 <hr>
 
 ### Common Solana CLI Commands:
+
 Solana CLI is a powerful tool for interacting with the Solana blockchain, managing accounts, deploying smart contracts, and more. Here’s a list of common **Solana CLI** commands and their descriptions:
 
 ### **Account and Wallet Management**
 
 1. **Create a New Keypair (Wallet)**
+
    ```bash
    solana-keygen new
    ```
+
    This command generates a new keypair (public and private key) and stores it locally.
 
 2. **Show Your Public Key**
+
    ```bash
    solana address
    ```
+
    Displays the public key of your default wallet.
 
 3. **Show Account Balance**
+
    ```bash
    solana balance
    ```
+
    Displays the SOL balance of the default wallet or a specified public key.
 
 4. **Airdrop SOL**
+
    ```bash
    solana airdrop <amount> <recipient_public_key>
    ```
+
    Requests an airdrop of SOL to your account (usually works on testnet and devnet).
 
 5. **Transfer SOL**
+
    ```bash
    solana transfer <recipient_public_key> <amount>
    ```
+
    Transfers SOL from your default wallet to another public key.
 
 6. **Show Wallet Details**
@@ -209,6 +231,7 @@ Solana CLI is a powerful tool for interacting with the Solana blockchain, managi
 ### **Network Management**
 
 7. **Set CLI to Devnet/Testnet/Mainnet**
+
    - **Devnet:**
      ```bash
      solana config set --url https://api.devnet.solana.com
@@ -223,9 +246,11 @@ Solana CLI is a powerful tool for interacting with the Solana blockchain, managi
      ```
 
 8. **Check Current Network Configuration**
+
    ```bash
    solana config get
    ```
+
    Shows the current network URL, wallet path, and other configurations.
 
 9. **Ping a Solana Cluster**
@@ -237,15 +262,19 @@ Solana CLI is a powerful tool for interacting with the Solana blockchain, managi
 ### **Program (Smart Contract) Deployment**
 
 10. **Build and Deploy a Program**
+
     ```bash
     solana program deploy <path_to_program_binary>
     ```
+
     Deploys a compiled Solana program (smart contract) to the blockchain.
 
 11. **Check Program Details**
+
     ```bash
     solana program show <program_id>
     ```
+
     Shows details about a deployed program (owner, balance, etc.).
 
 12. **Close a Program**
@@ -257,15 +286,19 @@ Solana CLI is a powerful tool for interacting with the Solana blockchain, managi
 ### **Validator and Network Operations**
 
 13. **Check Cluster Version**
+
     ```bash
     solana --version
     ```
+
     Displays the Solana CLI version and the network cluster version.
 
 14. **Check Cluster Health**
+
     ```bash
     solana validators
     ```
+
     Lists the current validators on the network and their status.
 
 15. **Vote on Behalf of a Validator**
@@ -277,27 +310,35 @@ Solana CLI is a powerful tool for interacting with the Solana blockchain, managi
 ### **Token Management (SPL Tokens)**
 
 16. **Create a New Token**
+
     ```bash
     spl-token create-token
     ```
+
     Creates a new SPL token (Solana Program Library token).
 
 17. **Create a Token Account**
+
     ```bash
     spl-token create-account <token_mint_address>
     ```
+
     Creates a token account to hold the specified token.
 
 18. **Mint New Tokens**
+
     ```bash
     spl-token mint <token_mint_address> <amount> <recipient_public_key>
     ```
+
     Mints new tokens of the specified SPL token to a recipient's account.
 
 19. **Transfer Tokens**
+
     ```bash
     spl-token transfer <token_mint_address> <amount> <recipient_account>
     ```
+
     Transfers SPL tokens from your token account to another account.
 
 20. **Check Token Account Balance**
@@ -311,12 +352,13 @@ These are some of the most common commands for managing accounts, interacting wi
 <hr>
 
 ### Solana Data Model:
+
 - We know that a account on solana can be set to executable or not.
 - If it is executable, it can run a program. That is how we deploy a program on solana.
 - If it is not executable, it can store data.
 - ![solana data model](/MD-data/image.png)
 - In web2 world we store our code to AWS/ Azure/ GCP. And we store our data to databases. That is, in different places.
-- In web3 world we store our code and data in `different accounts`. 
+- In web3 world we store our code and data in `different accounts`.
 - On Solana, if there is an Account which has `executable` set to `true`, and it has data, that data is stored in different account. That is what we can see in the image.
 
 - Watch: [Harkirat Singh - Programming on Solana | Program Derived addresses and Cross Program Invocation](https://www.youtube.com/watch?v=p0eD29d8JCM)
@@ -324,16 +366,19 @@ These are some of the most common commands for managing accounts, interacting wi
 <hr>
 
 ## AI Notes:
+
 ### Solana Data Model
 
 - **Account Types:**
-  - **Executable Accounts:** 
+
+  - **Executable Accounts:**
     - Can run programs.
     - Used to deploy programs on Solana.
   - **Non-Executable Accounts:**
     - Used to store data.
 
 - **Web2 vs. Web3 Storage:**
+
   - **Web2:**
     - Code is stored on AWS, Azure, GCP, etc.
     - Data is stored in databases.
@@ -345,10 +390,12 @@ These are some of the most common commands for managing accounts, interacting wi
   - ![solana data model](/MD-data/image.png)
 
 1. **Accounts in Solana:**
+
    - Solana operates on an **account-based model** where each account can either store data or execute programs.
    - **Executable accounts** are used to deploy and execute programs, while **non-executable accounts** store state or other types of data.
 
 2. **Web2 vs. Web3 Storage Comparison:**
+
    - In **Web2**, code (for running applications) is stored separately (on cloud platforms like AWS/Azure/GCP), and data is stored in databases.
    - In **Web3** (specifically Solana), programs (code) are stored in **executable accounts**, and the data they manage is stored in **non-executable accounts**.
 
@@ -362,6 +409,7 @@ These are some of the most common commands for managing accounts, interacting wi
 <hr>
 
 ### Token Program on Solana: (for steps - [link](https://petal-estimate-4e9.notion.site/Creating-a-token-b62f51d3b97e4706b8efd9cf432832e8))
+
 - Engineer at Solana created a token program. (which is like a smart contract on ethereum)
 - This program is deployed on the solana blockchain.
 - USDT & USDC are not a blockchain. They are tokens deployed on the solana blockchain using this token program.
@@ -369,7 +417,7 @@ These are some of the most common commands for managing accounts, interacting wi
 - Whatever we want to do on a new token, we can do it on a exising token as well.
 - Which means in the below image, Solana folks create a token program. And they deployed USDT and USDC on top of it.
 - So a Mint Account is created for USDT and USDC. And then we can create token accounts for USDT and USDC.
-![tokenSolana](/MD-data/image2.png)
+  ![tokenSolana](/MD-data/image2.png)
 - CLI commands to create a token: `spl-token create-token` - to create a new token.
 - ![spl-token](/MD-data/image3.png)
 - by default, the decimals are set to 9. Which means we can have 9 decimal points in the token.
@@ -386,55 +434,91 @@ These are some of the most common commands for managing accounts, interacting wi
 
 <hr>
 
+## A quick understanding of the Solana Token Program:
+
+- User **A** creates a token with address **B**, and by default, **A** becomes the owner of token **B**. As the owner, A has the authority to mint new tokens, effectively increasing the supply of token **B**.
+  To do this, **A** first creates a token account with address **C** for holding token **B**. Once the token account **C** is created, **A**, as the owner, can mint new tokens (e.g., increase the supply by 20) and store these newly minted tokens in **C**.
+
+```sh
+spl-token create-token
+```
+
+![alt text](/MD-data/image5.png)
+
+```sh
+spl-token create-account Bbbbbbb
+```
+
+![alt text](/MD-data/image6.png)
+
+```sh
+spl-token mint Bbbbbbb 20 Ccccccc
+```
+
+![alt text](/MD-data/image7.png)
+
+- Here first process of creating a token is called **minting**. Just like RBI create new money (paisa chaapna).
+- Second process is **creating a token account**. Just like a user creates a bank account.
+- Third process is **minting new tokens**. Just like a user deposits money in his bank account.
+
 ## AI Notes:
+
 ### Notes on Solana Token Program
 
 #### Overview:
+
 - The **Solana Token Program** is akin to a smart contract on Ethereum and is deployed on the Solana blockchain.
 - It allows users to create and manage tokens (e.g., USDT, USDC) on Solana.
 - USDT and USDC, while well-known tokens, are not blockchains themselves; they are tokens created using the Solana Token Program.
-  
+
 #### Key Concepts:
-1. **Token Program**:  
-   - Developed by Solana engineers and deployed on the Solana blockchain.  
+
+1. **Token Program**:
+
+   - Developed by Solana engineers and deployed on the Solana blockchain.
    - It’s the foundation for creating tokens on Solana, similar to how smart contracts work on Ethereum.
-  
-2. **USDT & USDC**:  
-   - Both are tokens built using this program, which means they follow the same protocol as any custom token deployed on Solana.  
-   - USDT and USDC have their own **Mint Accounts**, which is like the central authority managing these tokens.  
+
+2. **USDT & USDC**:
+   - Both are tokens built using this program, which means they follow the same protocol as any custom token deployed on Solana.
+   - USDT and USDC have their own **Mint Accounts**, which is like the central authority managing these tokens.
    - Users can create **Token Accounts** associated with these tokens to manage their holdings.
-   
-3. **Mint and Token Accounts**:  
+3. **Mint and Token Accounts**:
    - **Mint Account**: Like a central bank account (such as the RBI), responsible for minting new tokens.
-   - **Token Account**: Like a user’s bank account where individual token balances are stored.  
+   - **Token Account**: Like a user’s bank account where individual token balances are stored.
    - **User Account**: An account that interacts with token accounts for transfers or other operations.
-<hr>
+   <hr>
 
 **`My Analogy:`**
 
 Yes, your analogy is mostly correct, and you’ve captured the core concepts! Here's a refined explanation based on your thoughts:
 
 ### 1. **Mint Account (like RBI)**
-   - **Your analogy**: RBI can create new money and control the supply.
-   - **Blockchain analogy**: A **mint account** is responsible for creating new tokens. It's like the central authority (or smart contract) that has the power to "mint" or create new tokens. In many cases, it controls the token supply (e.g., how many tokens exist).
+
+- **Your analogy**: RBI can create new money and control the supply.
+- **Blockchain analogy**: A **mint account** is responsible for creating new tokens. It's like the central authority (or smart contract) that has the power to "mint" or create new tokens. In many cases, it controls the token supply (e.g., how many tokens exist).
 
 ### 2. **Token Account (like a user's bank account)**
-   - **Your analogy**: Each user has an account in the bank where they store their money.
-   - **Blockchain analogy**: A **token account** holds the balance of tokens for a user. This is similar to how a bank account stores money for a user. Token accounts track the number of tokens each user possesses.
+
+- **Your analogy**: Each user has an account in the bank where they store their money.
+- **Blockchain analogy**: A **token account** holds the balance of tokens for a user. This is similar to how a bank account stores money for a user. Token accounts track the number of tokens each user possesses.
 
 ### 3. **User Account (like the person or entity controlling the token account)**
-   - **Your analogy**: A user interacts with their bank account to perform transactions.
-   - **Blockchain analogy**: A **user account** represents the person or entity interacting with the token accounts. This is like a wallet or identity that can issue commands to transfer tokens between token accounts (e.g., sending, receiving, or interacting with decentralized applications).
+
+- **Your analogy**: A user interacts with their bank account to perform transactions.
+- **Blockchain analogy**: A **user account** represents the person or entity interacting with the token accounts. This is like a wallet or identity that can issue commands to transfer tokens between token accounts (e.g., sending, receiving, or interacting with decentralized applications).
 
 So yes, your understanding is on point! The **Mint Account** controls token creation, **Token Accounts** store individual token balances, and the **User Account** (like a wallet) is what interacts with these token accounts to make transactions.
+
 <hr>
 
-4. **Token Creation Commands**:  
-   - CLI Command to create a token: `spl-token create-token`.  
+4. **Token Creation Commands**:
+   - CLI Command to create a token: `spl-token create-token`.
    - By default, tokens on Solana have **9 decimal points**, which allows for fractional ownership similar to cryptocurrencies like Bitcoin.
 
 #### Steps for Token Creation:
+
 1. **Token Creation**:
+
    - You create a token (just like USDT/USDC) using the Solana CLI with the command `spl-token create-token`.
    - A **Mint Account** is generated for this token, similar to how USDT and USDC have their own mint accounts.
 
@@ -443,21 +527,33 @@ So yes, your understanding is on point! The **Mint Account** controls token crea
    - This token account acts like a bank account for users to hold or transact with the new token.
 
 #### Example Explanation:
+
 - To better understand this concept, think of the following analogy:
-   - **RBI (Mint Account)** -> **Bank (Token Account)** -> **User (User Account)**
-   - The mint account represents the authority to issue tokens, the token account stores those tokens, and the user account allows interaction with them.
+  - **RBI (Mint Account)** -> **Bank (Token Account)** -> **User (User Account)**
+  - The mint account represents the authority to issue tokens, the token account stores those tokens, and the user account allows interaction with them.
 
 ### Visualization:
+
 - In the diagram mentioned:
-   - Solana created the **Token Program**.
-   - Using this program, **USDT** and **USDC** were deployed, with mint accounts generated for both tokens.
-   - Token accounts were then created for users to store and transfer their USDT and USDC balances.
+  - Solana created the **Token Program**.
+  - Using this program, **USDT** and **USDC** were deployed, with mint accounts generated for both tokens.
+  - Token accounts were then created for users to store and transfer their USDT and USDC balances.
 
 ### Conclusion:
+
 The Solana Token Program allows users to create tokens and manage them efficiently, similar to how tokens like USDT and USDC are managed. The process of token creation, minting, and account setup is straightforward using Solana's CLI tools. The analogy with a central bank, banks, and users helps clarify how mint accounts, token accounts, and user accounts work together.
 
 <hr>
 <hr>
 
 # [Week 5: Wallet adapter](https://petal-estimate-4e9.notion.site/Wallet-adapter-860feade9cb940cea696eedf4fc61251)
+
 - You can follow to create faucet: [link](https://github.com/anza-xyz/wallet-adapter/blob/master/APP.md)
+- See `/week-5` folder for the code.
+<hr>
+
+# [Week 6: Creating a Solana Token LaunchPad](https://petal-estimate-4e9.notion.site/Token-launchpad-in-react-f0027bd023d4467ab5eb87d16ab21b40)
+
+- **Transaction** is a bunch of **Instructions** that are sent to the blockchain.
+- Example: While creating a token, we have to send multiple instructions to the blockchain. Like creating a mint account, creating a token account, etc. All these instructions are sent in a single transaction.
+- That is what Token LaunchPad is all about.
