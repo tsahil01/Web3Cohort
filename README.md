@@ -557,3 +557,21 @@ The Solana Token Program allows users to create tokens and manage them efficient
 - **Transaction** is a bunch of **Instructions** that are sent to the blockchain.
 - Example: While creating a token, we have to send multiple instructions to the blockchain. Like creating a mint account, creating a token account, etc. All these instructions are sent in a single transaction.
 - That is what Token LaunchPad is all about.
+
+<hr>
+
+# [Week 7: Ownership, Authorities, Programs and PDAs](https://petal-estimate-4e9.notion.site/Ownership-Authorities-Programs-and-PDAs-b2b8bfeae8064753982be9bd67afbb7b)
+
+### Accounts on Solana: [Useul Link](https://solana.com/docs/core/accounts)
+![alt text](/MD-data/image8.png)
+![alt text](/MD-data/image9.png)
+
+### System Program: [Useful Link](https://solana.com/docs/core/programs)
+- When developing custom programs on Solana, you will commonly interact with two native programs, the System Program and the BPF Loader.
+![alt text](/MD-data/image10.png)
+-  Account is like tree structure. And the root account is the system account. And the system account has multiple child accounts. And these child accounts can have their own child accounts. And so on.
+
+### BPF Loader:
+- Owner of all the programs on the solana blockchain.
+
+### Authority:
