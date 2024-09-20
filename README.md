@@ -575,3 +575,14 @@ The Solana Token Program allows users to create tokens and manage them efficient
 - Owner of all the programs on the solana blockchain.
 
 ### Authority:
+
+
+
+# [Week 8: PDAs - Program Derived addresses ]()
+- The `Associated token account` for an `Token` is a PDA.
+- The `Mint Account` has a private key but it is owned by `Token Program`.
+- But `Associated token account` `does not` have private key.
+![alt text](/MD-data/image11.png)
+- **Program Derived Addresses** (PDAs) provide developers on Solana with two main use cases:
+  - **Deterministic Account Addresses**: PDAs provide a mechanism to `deterministically derive an address` using a combination of optional "seeds" (predefined inputs) and a specific program ID.
+  - **Enable Program Signing**: The Solana runtime enables programs to "sign" for PDAs which are derived from its program ID.
