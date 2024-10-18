@@ -1,47 +1,36 @@
 import "./App.css";
 import {QueryClient, QueryClientProvider, useQuery, useQueryClient, } from '@tanstack/react-query';
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
+
+import { mainnet, http } from "viem/chains";
+
+const client = createPublicClient({ 
+  chain: mainnet, 
+  transport: http(), 
+})
 
 export default function App() {
+
+  const [balance, setBalance] = useState(0);
+
+  async function getBalance(){
+    const { balance } = await client.account.getBalance("0x1234");
+    console.log(balance);
+    setBalance(balance);
+    return balance;
+  }
+
+  getBalance()
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <Todo />
-    </QueryClientProvider>
+    // <QueryClientProvider client={queryClient}>
+    
+    <h2>
+      {balance}
+    </h2>
+    
+
+    // </QueryClientProvider>
   );
 }
 
-async function getterFunction() {
-  const data = await fetch("https://jsonplaceholder.typicode.com/posts/");
-  const response = await data.json();
-  console.log(response);
-  return response;
-}
-
-function Todo() {
-  const queryClient = useQueryClient();
-
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["todos"],
-    queryFn: getterFunction,
-  });
-
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-
-  if (error) {
-    console.log(error);
-    return <h1>Error: {error.message}</h1>;
-  }
-
-  return (
-    <div>
-      <h1>Todo List</h1>
-      <ul>
-        {data.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
