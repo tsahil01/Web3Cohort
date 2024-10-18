@@ -586,3 +586,17 @@ The Solana Token Program allows users to create tokens and manage them efficient
 - **Program Derived Addresses** (PDAs) provide developers on Solana with two main use cases:
   - **Deterministic Account Addresses**: PDAs provide a mechanism to `deterministically derive an address` using a combination of optional "seeds" (predefined inputs) and a specific program ID.
   - **Enable Program Signing**: The Solana runtime enables programs to "sign" for PDAs which are derived from its program ID.
+
+---
+<br>
+<br>
+<br>
+
+# [Week 10: ETH Introduction, EVM, Bytecode and Opcode](https://www.canva.com/design/DAGTK9Vx3sU/xZr-61ABL0eHGa6aSzVm5A/edit)
+
+---
+<br>
+<br>
+<br>
+
+# [ETH on the frontend.](https://petal-estimate-4e9.notion.site/ETH-on-the-frontend-1227dfd107358015bb15e3e87367db55?pvs=74)
