@@ -1,0 +1,17 @@
+{
+  "name": "prac",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc -b && node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.4",
+    "ethers": "^6.13.4",
+    "tweetnacl": "^1.0.3"
+  }
+}
