@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -7,7 +11,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -19,14 +23,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
-    
+    "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "../../prac/week-5-wallet-adapter/src/components/SignMsg.tsx"]
+  "include": ["src"]
 }
