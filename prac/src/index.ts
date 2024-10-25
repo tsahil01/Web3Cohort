@@ -1,3 +1,5 @@
+// Public and Private Key Generation and message signing using tweetnacl library in Solana using @solana/web3.js
+
 import { Keypair } from "@solana/web3.js";
 import nacl from "tweetnacl";
 
