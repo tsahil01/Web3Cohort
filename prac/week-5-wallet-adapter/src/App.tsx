@@ -25,7 +25,7 @@ export default function App() {
         <WalletModalProvider>
           <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-4 md:p-8">
             <div className="max-w-4xl mx-auto">
-              <div className="flex flex-row justify-between gap-2  p-8 border bg-white rounded-xl">
+              <div className="flex md:flex-row flex-col justify-between gap-2  p-8 border bg-white rounded-xl">
                 <div className="my-auto">
                   <h1 className="scroll-m-20 md:text-4xl text-2xl font-extrabold tracking-tight lg:text-5xl">
                     Solana Wallet Adapter
