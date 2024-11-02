@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     } else {
         const burn = await burnTokens(amount);
         const send = await sendNativeTokens(toAddress, amount);
-        return NextResponse.json({
+        return await NextResponse.json({
             message: "ok",
             burn,
             send

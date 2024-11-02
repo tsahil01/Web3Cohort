@@ -1,4 +1,4 @@
-import {  Connection, Keypair, PublicKey } from "@solana/web3.js";
+import { Connection, Keypair, PublicKey } from "@solana/web3.js";
 import { OWNER_PRIVATE_KEY, TOKEN_MINT } from "./accounts";
 import { getOrCreateAssociatedTokenAccount, mintTo, TOKEN_2022_PROGRAM_ID } from "@solana/spl-token";
 import bs58 from "bs58";
@@ -30,7 +30,7 @@ export async function mintTokens(fromAddress: string, amount: string) {
         "confirmed",
         undefined,
         TOKEN_2022_PROGRAM_ID,
-        
+
     );
 
 
@@ -51,11 +51,9 @@ export async function mintTokens(fromAddress: string, amount: string) {
 
     console.log("Minted tokens: ", mintNewTokens);
 
-    return {
-        fromAddress,
-        amount,
-        newTokenAccount: newTokenAccount,
-        mintNewTokens: mintNewTokens,
+    const response = {
         message: "Minted tokens"
     }
+
+    return response;
 }
