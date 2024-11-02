@@ -74,12 +74,13 @@ export function TokenLaunchpad() {
         wallet.publicKey,
         mintKeypair.publicKey,
         TOKEN_2022_PROGRAM_ID
+
       ),
       createInitializeMintInstruction(
         mintKeypair.publicKey,
         9,
         wallet.publicKey,
-        null,
+        wallet.publicKey,
         TOKEN_2022_PROGRAM_ID
       ),
       createInitializeInstruction({
@@ -90,7 +91,7 @@ export function TokenLaunchpad() {
         symbol: metaData.symbol,
         uri: metaData.uri,
         mintAuthority: wallet.publicKey,
-        updateAuthority: wallet.publicKey,
+        updateAuthority: wallet.publicKey
       })
     );
 
