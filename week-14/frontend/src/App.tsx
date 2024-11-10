@@ -9,7 +9,6 @@ import {
 } from "@solana/web3.js";
 
 const connection = new Connection(
-  "https://solana-mainnet.g.alchemy.com/v2/arXo6J0gHguO1CHzCzdghXYKk5SPSHAo"
 );
 
 const from = new PublicKey("DiEVU22vEBc256EdUAQvLoRCqAFggNmxiGgyfxeYZRJ3");
