@@ -602,3 +602,7 @@ The Solana Token Program allows users to create tokens and manage them efficient
 <br>
 
 # [Week 13: LSTs and Building an LST in Solana.](https://www.canva.com/design/DAGVOvVE1ow/wTKvuP2OnyLuvr4aAwtM-A/edit)
+
+# [Weel 14: Private key management, Building a project](https://petal-estimate-4e9.notion.site/Projects-class-1387dfd1073580a6912be8ca93cc7479)
+- [Shamir’s Secret Sharing Algorithm | Cryptography](https://www.geeksforgeeks.org/shamirs-secret-sharing-algorithm-cryptography/)
+- [Secure multi-party computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation)
