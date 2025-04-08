@@ -24,9 +24,10 @@ function decrypt(encryptedText) {
 
 // Example usage
 const textToEncrypt = 'Hello, World!';
-const encryptedText = encrypt(textToEncrypt);
-const decryptedText = decrypt(encryptedText);
-
 console.log('Original Text:', textToEncrypt);
+
 console.log('Encrypted Text:', encryptedText);
+const encryptedText = encrypt(textToEncrypt);
+
 console.log('Decrypted Text:', decryptedText);
+const decryptedText = decrypt(encryptedText);

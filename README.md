@@ -42,6 +42,17 @@
 - In Hexadecimal: `1 character = 4 bits`
 - In Base64: `1 character = 6 bits`
 - In Base58: `1 character = 5.86 bits`
+- Base58 = Base64 `-(minus)` (`+` and `/` and `0, O, I, l`)
+
+`Solana uses Base58 encoding for public keys and other data.`
+
+## Creating a public/private keypair
+1. Create public-private keypair
+2. Define a msg to sign
+3. Convert the msg to UInt8Array
+4. Sign the msg using private key
+5. Verify the msg using public key
+
 <hr>
 
 # Week 2 Assignment: [_Pouch: An open-source HD wallet generator for Sol and Eth._](https://web3pouch.vercel.app/)
