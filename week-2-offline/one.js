@@ -1,19 +1,9 @@
-let a = "hd";
+let word = "hello";
 
-const binaryRespresentaion = new TextEncoder().encode(a);
+let bytes = new TextEncoder().encode(word);
+console.log(bytes);
 
-// console.log(binaryRespresentaion);
+bytes = new Uint8Array([104, 101, 108, 108, 256]);
 
-function arrayToHex(arr) {
-  let hexString = "";
-  console.log(arr);
-  for (let i = 0; i < arr.length; i++) {
-    hexString += arr[i].toString(16).padStart(2, "0");
-  }
-  return hexString;
-}
-
-let b = ""
-
-const binaryRespresentaionTwo = new TextEncoder().encode(b);
-console.log(arrayToHex(binaryRespresentaionTwo));
+const decoder = new TextDecoder().decode(bytes);
+console.log(decoder);
